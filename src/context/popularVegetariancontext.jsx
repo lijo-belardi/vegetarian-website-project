@@ -2,9 +2,9 @@ import axios from "axios";
 import React, { useState, useEffect, createContext } from "react";
 import url from "../api/popularVegetarianRequest";
 
-export const popularVegetarianContext = createContext()
+export const PopularVegetarianContext = createContext()
 
-export const popularVegetarianProvider = (props) => {
+export const PopularVegetarianProvider = (props) => {
     const [popularRecipes, setPopularRecipes] = useState([])
 
     useEffect(() => {
@@ -26,8 +26,8 @@ export const popularVegetarianProvider = (props) => {
         }
     }
     return (
-        <PopularVegetarianRecipes.Provider value={[popularRecipes, setPopularRecipes]}>
+        <PopularVegetarianContext.Provider value={[popularRecipes, setPopularRecipes]}>
             {props.children}
-        </PopularVegetarianRecipes.Provider>
+        </PopularVegetarianContext.Provider>
     )
 }
