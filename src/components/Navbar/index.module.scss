@@ -1,0 +1,10 @@
+@use '../../styles' as *;
+
+.header {
+    background-color: $background-second-green;
+}
+
+.navbar {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
