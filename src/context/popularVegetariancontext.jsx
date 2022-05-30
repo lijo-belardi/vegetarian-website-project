@@ -26,8 +26,8 @@ export const popularVegetarianProvider = (props) => {
         }
     }
     return (
-        <popularVegetarianRecipes.Provider value={[popularRecipes, setPopularRecipes]}>
+        <PopularVegetarianRecipes.Provider value={[popularRecipes, setPopularRecipes]}>
             {props.children}
-        </popularVegetarianRecipes.Provider>
+        </PopularVegetarianRecipes.Provider>
     )
 }
