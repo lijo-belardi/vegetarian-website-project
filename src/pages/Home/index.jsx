@@ -2,6 +2,7 @@ import React from 'react'
 import PopularVegetarianCarousel from '../../components/PopularVegetarianCarousel'
 import Navbar from '../../components/Navbar'
 import Search from '../../components/Search'
+import Footer from '../../components/Footer'
 
 const Home = () => {
 
@@ -10,7 +11,7 @@ const Home = () => {
             <Navbar />
             <Search />
             <PopularVegetarianCarousel />
-            {/* Footer */}
+            <Footer />
         </div>
     )
 }
