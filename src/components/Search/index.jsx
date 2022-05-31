@@ -1,10 +1,19 @@
 import React from 'react'
+import { Typography, Container } from '@mui/material'
+
 
 const Search = () => {
   return (
-    <div>
-        <h1>Search</h1>
-    </div>
+    <Container>
+      <Typography
+        variant='h5'
+        align='center'
+      >
+        Search
+      </Typography>
+
+      {/* Form */}
+    </Container>
   )
 }
 
