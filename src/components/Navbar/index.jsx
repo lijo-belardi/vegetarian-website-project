@@ -1,13 +1,21 @@
 import React from 'react'
 import styles from './index.module.scss'
+import { Typography } from '@mui/material'
+import { Container } from '@mui/system'
 
 const Navbar = () => {
   return (
     <div className={styles.header}>
-      <div className={styles.navbar}>
+      <Container className={styles.navbar}>
         {/* TODO Navlink */}
-        <h1>Home</h1>
-      </div>
+        
+        <Typography
+          variant='h6'
+          align='center'
+        >
+          Home
+        </Typography>
+      </Container>
     </div>
   )
 }
