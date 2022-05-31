@@ -4,12 +4,13 @@ import Card from '../Card';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import styles from './index.module.scss'
+import { breakpoints, style } from '@mui/system';
 
 const PopularVegetarianCarousel = () => {
   const [recipes, setRecipes] = useContext(PopularVegetarianContext)
   return (
-    <div>
-      <h3>Vegetarian Picks</h3>
+    <div className={styles.carouselSection}>
+      <h2>Vegetarian Picks</h2>
       <Splide
         className={styles.splide}
         options={{
@@ -17,7 +18,12 @@ const PopularVegetarianCarousel = () => {
           arrows: true,
           pagination: false,
           drag: 'free',
-          gap: '5rem',
+          gap: '2.5rem',
+          breakpoints: {
+            1200: { perPage: 2 },
+            900: { perPage: 1 },
+            600: { perPage: 1 }
+          }
         }}>
 
         {recipes.map((recipe) => {
