@@ -3,7 +3,7 @@ import styles from './index.module.scss'
 
 const Card = (props) => {
   return (
-    <div key={props.key} className={styles.card}>
+    <div className={styles.card}>
         {/* TODO aggiungere link */}
         <p>{props.title}</p>
         <img src={props.img} alt={props.title} />
