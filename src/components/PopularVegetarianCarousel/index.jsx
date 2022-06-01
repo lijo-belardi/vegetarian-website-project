@@ -4,13 +4,21 @@ import Card from '../Card';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import styles from './index.module.scss'
-import { breakpoints, style } from '@mui/system';
+import { Typography, Container } from '@mui/material';
 
 const PopularVegetarianCarousel = () => {
   const [recipes, setRecipes] = useContext(PopularVegetarianContext)
   return (
-    <div className={styles.carouselSection}>
-      <h2>Vegetarian Picks</h2>
+    <Container className={styles.carouselSection}>
+      {/* Carousel's title */}
+      <Typography
+        variant='h4'
+        align='center'
+      >
+        Vegetarian Picks
+      </Typography>
+
+      {/* Carousel */}
       <Splide
         className={styles.splide}
         options={{
@@ -37,7 +45,7 @@ const PopularVegetarianCarousel = () => {
         })}
       </Splide>
 
-    </div>
+    </Container>
   )
 }
 
