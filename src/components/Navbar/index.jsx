@@ -8,10 +8,7 @@ const Navbar = () => {
   return (
     <div className={styles.header}>
       <Container className={styles.navbar}>
-        <Typography
-          variant='h6'
-          align='center'
-        >
+        <Typography variant='h6' align='center'>
           <NavLink to={'/'}>Home</NavLink>
         </Typography>
       </Container>
