@@ -8,8 +8,6 @@ const Navbar = () => {
   return (
     <div className={styles.header}>
       <Container className={styles.navbar}>
-        {/* TODO Navlink */}
-        
         <Typography
           variant='h6'
           align='center'
