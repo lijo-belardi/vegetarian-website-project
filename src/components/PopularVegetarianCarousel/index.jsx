@@ -5,6 +5,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import styles from './index.module.scss'
 import { Typography, Container } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const PopularVegetarianCarousel = () => {
   const [recipes, setRecipes] = useContext(PopularVegetarianContext)
@@ -36,11 +37,14 @@ const PopularVegetarianCarousel = () => {
 
         {recipes.map((recipe) => {
           return <SplideSlide key={recipe.id}>
-            <Card
-              key={recipe.id}
-              id={recipe.id}
-              title={recipe.title}
-              img={recipe.image} />
+            <Link to={`/recipe/${recipe.id}`}>
+              <Card
+                key={recipe.id}
+                id={recipe.id}
+                title={recipe.title}
+                img={recipe.image}>
+              </Card>
+            </Link>
           </SplideSlide>
         })}
       </Splide>
