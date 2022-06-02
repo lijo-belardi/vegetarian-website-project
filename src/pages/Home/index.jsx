@@ -3,15 +3,27 @@ import PopularVegetarianCarousel from '../../components/PopularVegetarianCarouse
 import Navbar from '../../components/Navbar'
 import Search from '../../components/Search'
 import Footer from '../../components/Footer'
+import ErrorBoundary from '../../components/ErrorBoundary'
 
 const Home = () => {
 
     return (
         <div>
-            <Navbar />
-            <Search />
-            <PopularVegetarianCarousel />
-            <Footer />
+            <ErrorBoundary>
+                <Navbar />
+            </ErrorBoundary>
+
+            <ErrorBoundary>
+                <Search />
+            </ErrorBoundary>
+
+            <ErrorBoundary>
+                <PopularVegetarianCarousel />
+            </ErrorBoundary>
+
+            <ErrorBoundary>
+                <Footer />
+            </ErrorBoundary>
         </div>
     )
 }
