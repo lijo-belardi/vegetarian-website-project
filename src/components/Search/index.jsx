@@ -1,19 +1,18 @@
-import React from 'react'
-import { Typography, Container, TextField } from '@mui/material'
-
+import React, { useState } from 'react'
+import { Container } from '@mui/material'
+import { FaSearch } from 'react-icons/fa'
+import styles from './index.module.scss'
 
 const Search = () => {
   return (
-    <Container>
-      <Typography
-        variant='h5'
-        align='center'
-      >
-        Search
-      </Typography>
+    <Container className={styles['search-container']}>
+      <form className={styles['form']}>
+        <FaSearch></FaSearch>
+        <input
 
-      {/* Form */}
-      <TextField id="outlined-basic" label="Recipe to search" variant="outlined"/>
+          type="text"
+        />
+      </form>
     </Container>
   )
 }
