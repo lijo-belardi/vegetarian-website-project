@@ -4,12 +4,9 @@
     background-color: $background-second-green;
 }
 
-.navbar {
-    margin-left: 8rem;
-    margin-right: 8rem;
-}
-
-a {
+.homeLink {
+    font-size: 1rem;
     color: black;
     text-decoration: none;
+    align-items: center;
 }

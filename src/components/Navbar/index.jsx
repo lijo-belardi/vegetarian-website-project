@@ -7,9 +7,9 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className={styles.header}>
-      <Container className={styles.navbar}>
+      <Container>
         <Typography variant='h6' align='center'>
-          <NavLink to={'/'}>Home</NavLink>
+          <NavLink className={styles.homeLink} to={'/'}>Home</NavLink>
         </Typography>
       </Container>
     </div>
