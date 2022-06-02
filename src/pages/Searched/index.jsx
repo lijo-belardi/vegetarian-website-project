@@ -29,13 +29,14 @@ const Searched = () => {
             <div className={styles['grid']}>
                 {searchedRecipes.map((item) => {
                     return (
+                        <Link key={item.id} to={`/recipe/${item.id}`}>
                         <Card
                             key={item.id}
                             id={item.id}
                             title={item.title}
                             img={item.image} >
-                            <Link to={`/recipe/${item.id}`} />
                         </Card>
+                        </Link>
                     )
                 })}
             </div>
