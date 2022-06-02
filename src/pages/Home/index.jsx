@@ -1,5 +1,5 @@
 import React from 'react'
-import PopularVegetarianCarousel from '../../components/PopularVegetarianCarousel'
+import Vegetarian from '../../components/Vegetarian'
 import Navbar from '../../components/Navbar'
 import Search from '../../components/Search'
 import Footer from '../../components/Footer'
@@ -18,7 +18,7 @@ const Home = () => {
             </ErrorBoundary>
 
             <ErrorBoundary>
-                <PopularVegetarianCarousel />
+                <Vegetarian />
             </ErrorBoundary>
 
             <ErrorBoundary>
