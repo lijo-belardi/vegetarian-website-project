@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
+import { Container } from '@mui/material'
 import styles from './index.module.scss'
 import Navbar from '../../components/Navbar'
+import Search from '../../components/Search'
 import Card from '../../components/Card'
 
 const Searched = () => {
@@ -17,28 +19,34 @@ const Searched = () => {
         try {
             const data = await axios(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&query=${name}`)
             setSearchedRecipes(data.data.results)
-            console.log(data.data.results);
         } catch (error) {
-            console.log(error)
+            console.log('Error function: getSearched')
+            console.log(error.name);
+            console.log(error.message);
         }
     }
 
     return (
         <div>
             <Navbar />
-            <div className={styles['grid']}>
-                {searchedRecipes.map((item) => {
-                    return (
-                        <Link key={item.id} to={`/recipe/${item.id}`}>
-                            <Card
-                                key={item.id}
-                                id={item.id}
-                                title={item.title}
-                                img={item.image} />
-                        </Link>
-                    )
-                })}
-            </div>
+            <Container>
+                <Search />
+            </Container>
+            <Container>
+                <div className={styles['grid']}>
+                    {searchedRecipes.map((item) => {
+                        return (
+                            <Link key={item.id} to={`/recipe/${item.id}`}>
+                                <Card
+                                    key={item.id}
+                                    id={item.id}
+                                    title={item.title}
+                                    img={item.image} />
+                            </Link>
+                        )
+                    })}
+                </div>
+            </Container>
         </div>
     )
 }
