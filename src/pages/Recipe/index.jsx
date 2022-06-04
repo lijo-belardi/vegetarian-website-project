@@ -57,8 +57,12 @@ const Recipe = () => {
           </button>
           {activeTab === 'instructions' && (
             <div>
-              <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
-              <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+              <div className={styles['summary']}>
+                <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+              </div>
+              <div>
+                <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+              </div>
             </div>
           )}
           {activeTab === 'ingredients' && (
