@@ -8,8 +8,8 @@ import Card from '../Card';
 const Vegetarian = () => {
   const [recipes, setRecipes] = useContext(PopularVegetarianContext)
   return (
-    <Container>
-      <Typography variant='h4' align='center'>
+    <Container className={styles['vegetarian-section']}>
+      <Typography variant='h4' align='left'>
         Vegetarian Picks
       </Typography>
 
