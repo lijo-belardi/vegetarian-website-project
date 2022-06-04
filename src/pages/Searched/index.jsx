@@ -6,6 +6,7 @@ import styles from './index.module.scss'
 import Navbar from '../../components/Navbar'
 import Search from '../../components/Search'
 import Card from '../../components/Card'
+import Footer from '../../components/Footer'
 
 const Searched = () => {
     const [searchedRecipes, setSearchedRecipes] = useState([])
@@ -47,6 +48,7 @@ const Searched = () => {
                     })}
                 </div>
             </Container>
+            <Footer />
         </div>
     )
 }

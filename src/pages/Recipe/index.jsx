@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar'
 import styles from './index.module.scss'
 import classNames from "classnames";
 import axios from 'axios'
+import Footer from '../../components/Footer';
 
 const Recipe = () => {
   let params = useParams()
@@ -69,6 +70,8 @@ const Recipe = () => {
 
         </div>
       </Container>
+
+      <Footer />
 
 
 

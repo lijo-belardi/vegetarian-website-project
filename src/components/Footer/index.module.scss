@@ -1,0 +1,10 @@
+@use "../../styles" as *;
+
+.footer {
+    margin-top: 5rem;
+    padding: 2rem;
+    background-color: $background-second-green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
