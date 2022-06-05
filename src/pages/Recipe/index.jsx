@@ -4,6 +4,7 @@ import { Container, Typography, List, ListItem } from '@mui/material'
 import Search from '../../components/Search'
 import Navbar from '../../components/Navbar'
 import Title from '../../components/Title';
+import RecipeImage from '../../components/RecipeImage';
 import styles from './index.module.scss'
 import classNames from "classnames";
 import axios from 'axios'
@@ -48,7 +49,7 @@ const Recipe = () => {
           {/* Recipe - Title */}
           <Title title={details.title} />
           {/* Recipe - Image */}
-          <img src={details.image} alt={details.title} />
+          <RecipeImage src={details.image} alt={details.title} />
         </div>
 
         {/* Recipe - info's section */}
