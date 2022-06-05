@@ -9,15 +9,15 @@ const Vegetarian = () => {
   const [recipes, setRecipes] = useContext(PopularVegetarianContext)
   return (
     <Container className={styles['vegetarian-section']}>
-      <Typography variant='h4' align='left'>
+      <Typography variant='h4' align='left' sx={{ fontWeight: 'bold' }}>
         Vegetarian Picks
       </Typography>
 
       <div className={styles.grid}>
         {recipes.map((recipe) => {
           return (
-          <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
-              <Card 
+            <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
+              <Card
                 key={recipe.id}
                 id={recipe.id}
                 title={recipe.title}
