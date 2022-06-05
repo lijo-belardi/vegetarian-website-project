@@ -52,38 +52,57 @@ const Recipe = () => {
           <RecipeImage src={details.image} alt={details.title} />
         </div>
 
+        {/* Recipe - summary's section */}
+        <div>
+          {/* Recipe - summary - title */}
+          <Typography
+            variant='h5'
+            sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
+            Summary
+          </Typography>
+
+          {/* Recipe - summary - text */}
+          <Typography
+            className={styles['summary-text']}
+            variant='h5'
+            dangerouslySetInnerHTML={{ __html: details.summary }}>
+          </Typography>
+        </div>
+
         {/* Recipe - info's section */}
         <div className={styles['info']}>
+          {/* Recipe - instruction's button */}
           <button
             className={activeTab === 'instructions' ? classNames(styles['active']) : ''}
             onClick={() => setActiveTab('instructions')}>
             Instructions
           </button>
 
+          {/* Recipe - ingredients's button */}
           <button
             className={activeTab === 'ingredients' ? classNames(styles['active']) : ''}
             onClick={() => setActiveTab('ingredients')}>
             Ingredients
           </button>
+
+          {/* Recipe - activeTab - instructions */}
           {activeTab === 'instructions' && (
             <div>
-              <div className={styles['summary']}>
-                <Typography variant='h5' sx={{ mt: 2, mb: 2, fontWeight: 'bold' }}>Summary</Typography>
-                <Typography
-                  className={styles['summary-text']}
-                  variant='h5'
-                  dangerouslySetInnerHTML={{ __html: details.summary }}>
-                </Typography>
-              </div>
               <div className={styles['instructions']}>
-                <Typography variant='h5' sx={{ mt: 2, mb: 2, fontWeight: 'bold' }}>
+                {/* Recipe - instruction's title */}
+                <Typography
+                  variant='h5'
+                  sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
                   Instructions
                 </Typography>
+
+                {/* Recipe - instruction's text */}
                 <Typography
                   className={styles['instructions-text']}
                   variant='h5'
-                  dangerouslySetInnerHTML={{ __html: details.instructions }}>
-                </Typography>
+                  dangerouslySetInnerHTML={{ __html: details.instructions }}
+                />
+
               </div>
             </div>
           )}
