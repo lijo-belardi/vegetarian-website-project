@@ -107,11 +107,22 @@ const Recipe = () => {
             </div>
           )}
           {activeTab === 'ingredients' && (
-            <List>
-              {ingredients.map((ingredient) => {
-                return <ListItem key={ingredient.original}>{ingredient.original}</ListItem>
-              })}
-            </List>)}
+            <div>
+              <Typography
+                variant='h5'
+                sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
+                Ingredients
+              </Typography>
+              <List>
+                {ingredients.map((ingredient) => {
+                  return <ListItem key={ingredient.original} sx={{pl: 0}}>
+                    <Typography variant='h5' >
+                      {ingredient.original}
+                      </Typography>
+                  </ListItem>
+                })}
+              </List>
+            </div>)}
 
         </div>
       </Container>
