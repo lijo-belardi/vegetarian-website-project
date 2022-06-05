@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography } from '@mui/material'
 
-const Title = (props) => {
+const RecipeTitle = (props) => {
     return (
         <Typography
             variant='h4'
@@ -12,4 +12,4 @@ const Title = (props) => {
     )
 }
 
-export default Title
+export default RecipeTitle

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { Container, Typography, List, ListItem } from '@mui/material'
 import Search from '../../components/Search'
 import Navbar from '../../components/Navbar'
-import Title from '../../components/Title';
+import RecipeTitle from '../../components/RecipeTitle';
 import RecipeImage from '../../components/RecipeImage';
 import styles from './index.module.scss'
 import classNames from "classnames";
@@ -47,7 +47,7 @@ const Recipe = () => {
         {/* Recipe - Title and image */}
         <div>
           {/* Recipe - Title */}
-          <Title title={details.title} />
+          <RecipeTitle title={details.title} />
           {/* Recipe - Image */}
           <RecipeImage src={details.image} alt={details.title} />
         </div>
@@ -102,30 +102,34 @@ const Recipe = () => {
                   variant='h5'
                   dangerouslySetInnerHTML={{ __html: details.instructions }}
                 />
-
               </div>
             </div>
           )}
+
+          {/* Recipe - activeTab - ingredients */}
           {activeTab === 'ingredients' && (
             <div>
+              {/* Recipe - ingredients's title */}
               <Typography
                 variant='h5'
                 sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
                 Ingredients
               </Typography>
+
+              {/* Recipe - ingredients's text */}
               <List>
                 {ingredients.map((ingredient) => {
-                  return <ListItem key={ingredient.original} sx={{pl: 0}}>
+                  return <ListItem key={ingredient.original} sx={{ pl: 0 }}>
                     <Typography variant='h5' >
                       {ingredient.original}
-                      </Typography>
+                    </Typography>
                   </ListItem>
                 })}
               </List>
             </div>)}
 
-        </div>
-      </Container>
+        </div> {/* Recipe - info's section - END */}
+      </Container> {/* Recipe - main container - END */}
 
       {/* Footer */}
       <Footer />
