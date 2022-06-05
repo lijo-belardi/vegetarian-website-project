@@ -39,11 +39,9 @@ const Recipe = () => {
 
       <Container className={styles['recipe-container']}>
         <div>
-          <Typography
-            variant='h4'
-            sx={{ fontWeight: 'bold', mb: 3 }}
-            align='left'>{details.title}
-          </Typography>
+          {/* Recipe - Title */}
+          <Title title={details.title} />
+          {/* Recipe - Image */}
           <img src={details.image} alt={details.title} />
         </div>
 
