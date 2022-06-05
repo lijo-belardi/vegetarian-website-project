@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
-import { Container, Typography, Button } from '@mui/material'
+import { Container, Typography, List, ListItem } from '@mui/material'
 import Search from '../../components/Search'
 import Navbar from '../../components/Navbar'
+import Title from '../../components/Title';
 import styles from './index.module.scss'
 import classNames from "classnames";
 import axios from 'axios'
@@ -32,12 +33,17 @@ const Recipe = () => {
 
   return (
     <div>
+      {/* Navbar */}
       <Navbar />
+
+      {/* Search's section */}
       <Container>
         <Search />
       </Container>
 
+      {/* Recipe - main container */}
       <Container className={styles['recipe-container']}>
+        {/* Recipe - Title and image */}
         <div>
           {/* Recipe - Title */}
           <Title title={details.title} />
@@ -45,6 +51,7 @@ const Recipe = () => {
           <img src={details.image} alt={details.title} />
         </div>
 
+        {/* Recipe - info's section */}
         <div className={styles['info']}>
           <button
             className={activeTab === 'instructions' ? classNames(styles['active']) : ''}
@@ -60,7 +67,7 @@ const Recipe = () => {
           {activeTab === 'instructions' && (
             <div>
               <div className={styles['summary']}>
-                <Typography variant='h4' sx={{ mt: 2, mb: 2 }}>Summary</Typography>
+                <Typography variant='h5' sx={{ mt: 2, mb: 2, fontWeight: 'bold' }}>Summary</Typography>
                 <Typography
                   className={styles['summary-text']}
                   variant='h5'
@@ -68,7 +75,9 @@ const Recipe = () => {
                 </Typography>
               </div>
               <div className={styles['instructions']}>
-                <Typography variant='h4' sx={{ mt: 2, mb: 2 }}>Instructions</Typography>
+                <Typography variant='h5' sx={{ mt: 2, mb: 2, fontWeight: 'bold' }}>
+                  Instructions
+                </Typography>
                 <Typography
                   className={styles['instructions-text']}
                   variant='h5'
@@ -78,20 +87,17 @@ const Recipe = () => {
             </div>
           )}
           {activeTab === 'ingredients' && (
-            <ul>
+            <List>
               {ingredients.map((ingredient) => {
-                return <li key={ingredient.original}>{ingredient.original}</li>
+                return <ListItem key={ingredient.original}>{ingredient.original}</ListItem>
               })}
-            </ul>)}
+            </List>)}
 
         </div>
       </Container>
 
+      {/* Footer */}
       <Footer />
-
-
-
-
     </div>
   )
 }

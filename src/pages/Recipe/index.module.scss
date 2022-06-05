@@ -1,24 +1,19 @@
 @use "../../styles" as *;
 
+/* --- recipe's container --- */
 .recipe-container {
     margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
+    /* button - active's state */
     .active {
         background: $background-second-green;
         color: $text-main-color;
     }
 
-    h2 {
-        margin-bottom: 2rem;
-    }
-    li {
-        font-size: 1.2rem;
-        line-height: 2.5rem;
-    }
+
     ul {
         margin-top: 2rem;
     }
