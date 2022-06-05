@@ -42,6 +42,24 @@
     margin-bottom: 2rem;
 }
 
+.summary-text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.instructions {
+    margin-bottom: 2rem;
+}
+
+.instructions-text {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 button {
     padding: 1rem 2rem;
     color: $text-main-color;

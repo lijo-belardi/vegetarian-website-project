@@ -39,7 +39,11 @@ const Recipe = () => {
 
       <Container className={styles['recipe-container']}>
         <div>
-          <h2>{details.title}</h2>
+          <Typography
+            variant='h4'
+            sx={{ fontWeight: 'bold', mb: 3 }}
+            align='left'>{details.title}
+          </Typography>
           <img src={details.image} alt={details.title} />
         </div>
 
@@ -58,10 +62,20 @@ const Recipe = () => {
           {activeTab === 'instructions' && (
             <div>
               <div className={styles['summary']}>
-                <h3 dangerouslySetInnerHTML={{ __html: details.summary }}></h3>
+                <Typography variant='h4' sx={{ mt: 2, mb: 2 }}>Summary</Typography>
+                <Typography
+                  className={styles['summary-text']}
+                  variant='h5'
+                  dangerouslySetInnerHTML={{ __html: details.summary }}>
+                </Typography>
               </div>
-              <div>
-                <h3 dangerouslySetInnerHTML={{ __html: details.instructions }}></h3>
+              <div className={styles['instructions']}>
+                <Typography variant='h4' sx={{ mt: 2, mb: 2 }}>Instructions</Typography>
+                <Typography
+                  className={styles['instructions-text']}
+                  variant='h5'
+                  dangerouslySetInnerHTML={{ __html: details.instructions }}>
+                </Typography>
               </div>
             </div>
           )}
