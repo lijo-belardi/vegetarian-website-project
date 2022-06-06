@@ -7,7 +7,7 @@ The user can view the recipe's image, summary, instructions, and ingredients.
 
 
 ## Screenshot
-
+![App Screenshot](/src/assets/img/vegetarian-recipe-website-screenshot.jpg)
 
 
 ## Link
