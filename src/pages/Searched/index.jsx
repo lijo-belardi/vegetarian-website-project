@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
-import { Container } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import styles from './index.module.scss'
 import Navbar from '../../components/Navbar'
 import Search from '../../components/Search'
@@ -30,8 +30,16 @@ const Searched = () => {
     return (
         <div>
             <Navbar />
+
+            <Search />
+
             <Container>
-                <Search />
+                <Typography
+                    variant='h4'
+                    align='left'
+                    sx={{ mt: 4, fontWeight: 'bold' }}>
+                    Searched recipes
+                </Typography>
             </Container>
             <Container>
                 <div className={styles['grid']}>
