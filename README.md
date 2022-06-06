@@ -1,4 +1,5 @@
 # Vegetarian Website Project
+## Description
 
 # Getting Started with Create React App
 
@@ -70,3 +71,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## API Reference
+
+| Documentation | Link                                                               |
+| :------------ | :----------------------------------------------------------------- |
+| Spoonacular   | [Spoonacular - docs](https://spoonacular.com/food-api/docs)        |
+
+
+| Parameter | Type     | Description                | 
+| :-------- | :------- | :------------------------- | 
+| `key`     | `string` |  API Key                   | 
+
+## Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://lijo-belardi.github.io/)
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lijo-belardi-25615918b/)
+
+## Acknowledgements
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - [Spoonacular](https://spoonacular.com/food-api/docs)
+ 
+## License
+[![GitHub license](https://img.shields.io/github/license/lijo-belardi/vegetarian-website-project?style=for-the-badge)](https://github.com/lijo-belardi/vegetarian-website-project/blob/master/LICENSE)
