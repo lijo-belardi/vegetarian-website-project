@@ -1,6 +1,13 @@
 # Vegetarian Website Project
 ## Description
 
+## Screenshot
+
+## Link
+![Netlify](https://img.shields.io/netlify/ea29be86-56ff-47b8-81df-4872e7a8c3e3?style=for-the-badge)
+![Website](https://img.shields.io/website?label=WEBSITE&style=for-the-badge&up_message=CLick%20me%21&url=https%3A%2F%2Fvegetarian-recipe-website.netlify.app%2F)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
