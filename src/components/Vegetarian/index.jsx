@@ -13,7 +13,9 @@ const Vegetarian = () => {
         Vegetarian Picks
       </Typography>
 
+      {/* Vegetarian - grid */}
       <div className={styles.grid}>
+        {/* Vegetarian - grid's items */}
         {recipes.map((recipe) => {
           return (
             <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
