@@ -72,6 +72,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+
+## Built with
+- [Axios](https://github.com/axios/axios)
+- [React](https://it.reactjs.org/)
+- [React Context API](https://reactjs.org/docs/context.html#api)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React Router](https://reactrouter.com/)
+- [Sass](https://sass-lang.com/)
+
+
 ## API Reference
 
 | Documentation | Link                                                               |
