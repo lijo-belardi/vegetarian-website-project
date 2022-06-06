@@ -3,7 +3,7 @@
 
 ## Screenshot
 
-## Link
+## Website Link
 [Website](https://vegetarian-recipe-website.netlify.app/)
 
 
