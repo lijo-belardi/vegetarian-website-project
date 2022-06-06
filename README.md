@@ -1,9 +1,16 @@
 # Vegetarian Website Project
+
 ## Description
+
+The project allows the user to search for vegetarian recipes within the Spoonacular service.
+The user can view the recipe's image, summary, instructions, and ingredients.
+
 
 ## Screenshot
 
-## Website Link
+
+
+## Link
 [Website](https://vegetarian-recipe-website.netlify.app/)
 
 
