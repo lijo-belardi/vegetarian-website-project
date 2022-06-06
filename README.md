@@ -5,15 +5,16 @@
 The project allows the user to search for vegetarian recipes within the Spoonacular service.
 The user can view the recipe's image, summary, instructions, and ingredients.
 
+## Link
+### Website: [vegetarian-website-netlify](https://vegetarian-recipe-website.netlify.app/)
+
 
 ## Screenshot
+### Home
 ![App Screenshot](/src/assets/img/vegetarian-recipe-website-screenshot.jpg)
+
+### Recipe (summary and instructions)
 ![App Screenshot](/src/assets/img/vegetarian-recipe-website-summary-instructions-section.jpg)
-
-
-## Link
-[Website](https://vegetarian-recipe-website.netlify.app/)
-
 
 
 # Getting Started with Create React App
@@ -114,8 +115,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lijo-belardi-25615918b/)
 
 ## Acknowledgements
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
  - [Spoonacular](https://spoonacular.com/food-api/docs)
  
