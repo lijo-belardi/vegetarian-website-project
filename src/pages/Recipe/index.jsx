@@ -9,6 +9,8 @@ import styles from './index.module.scss'
 import classNames from "classnames";
 import axios from 'axios'
 import Footer from '../../components/Footer';
+import ErrorBoundary from '../../components/ErrorBoundary'
+
 
 const Recipe = () => {
   let params = useParams()
@@ -42,95 +44,96 @@ const Recipe = () => {
         <Search />
       </Container>
 
-      {/* Recipe - main container */}
-      <Container className={styles['recipe-container']}>
-        {/* Recipe - Title and image */}
-        <div>
-          {/* Recipe - Title */}
-          <RecipeTitle title={details.title} />
-          {/* Recipe - Image */}
-          <RecipeImage src={details.image} alt={details.title} />
-        </div>
+      <ErrorBoundary>
+        {/* Recipe - main container */}
+        <Container className={styles['recipe-container']}>
+          {/* Recipe - Title and image */}
+          <div>
+            {/* Recipe - Title */}
+            <RecipeTitle title={details.title} />
+            {/* Recipe - Image */}
+            <RecipeImage src={details.image} alt={details.title} />
+          </div>
 
-        {/* Recipe - summary's section */}
-        <div>
-          {/* Recipe - summary - title */}
-          <Typography
-            variant='h5'
-            sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
-            Summary
-          </Typography>
+          {/* Recipe - summary's section */}
+          <div>
+            {/* Recipe - summary - title */}
+            <Typography
+              variant='h5'
+              sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
+              Summary
+            </Typography>
 
-          {/* Recipe - summary - text */}
-          <Typography
-            className={styles['summary-text']}
-            variant='h5'
-            dangerouslySetInnerHTML={{ __html: details.summary }}>
-          </Typography>
-        </div>
+            {/* Recipe - summary - text */}
+            <Typography
+              className={styles['summary-text']}
+              variant='h5'
+              dangerouslySetInnerHTML={{ __html: details.summary }}>
+            </Typography>
+          </div>
 
-        {/* Recipe - info's section */}
-        <div className={styles['info']}>
-          {/* Recipe - instruction's button */}
-          <button
-            className={activeTab === 'instructions' ? classNames(styles['active']) : ''}
-            onClick={() => setActiveTab('instructions')}>
-            Instructions
-          </button>
+          {/* Recipe - info's section */}
+          <div className={styles['info']}>
+            {/* Recipe - instruction's button */}
+            <button
+              className={activeTab === 'instructions' ? classNames(styles['active']) : ''}
+              onClick={() => setActiveTab('instructions')}>
+              Instructions
+            </button>
 
-          {/* Recipe - ingredients's button */}
-          <button
-            className={activeTab === 'ingredients' ? classNames(styles['active']) : ''}
-            onClick={() => setActiveTab('ingredients')}>
-            Ingredients
-          </button>
+            {/* Recipe - ingredients's button */}
+            <button
+              className={activeTab === 'ingredients' ? classNames(styles['active']) : ''}
+              onClick={() => setActiveTab('ingredients')}>
+              Ingredients
+            </button>
 
-          {/* Recipe - activeTab - instructions */}
-          {activeTab === 'instructions' && (
-            <div>
-              <div className={styles['instructions']}>
-                {/* Recipe - instruction's title */}
+            {/* Recipe - activeTab - instructions */}
+            {activeTab === 'instructions' && (
+              <div>
+                <div className={styles['instructions']}>
+                  {/* Recipe - instruction's title */}
+                  <Typography
+                    variant='h5'
+                    sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
+                    Instructions
+                  </Typography>
+
+                  {/* Recipe - instruction's text */}
+                  <Typography
+                    className={styles['instructions-text']}
+                    variant='h5'
+                    dangerouslySetInnerHTML={{ __html: details.instructions }}
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Recipe - activeTab - ingredients */}
+            {activeTab === 'ingredients' && (
+              <div>
+                {/* Recipe - ingredients's title */}
                 <Typography
                   variant='h5'
                   sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
-                  Instructions
+                  Ingredients
                 </Typography>
 
-                {/* Recipe - instruction's text */}
-                <Typography
-                  className={styles['instructions-text']}
-                  variant='h5'
-                  dangerouslySetInnerHTML={{ __html: details.instructions }}
-                />
-              </div>
-            </div>
-          )}
+                {/* Recipe - ingredients's text */}
+                <List>
+                  {ingredients.map((ingredient) => {
+                    return <ListItem key={ingredient.original} sx={{ pl: 0 }}>
+                      <Typography variant='h5' >
+                        {ingredient.original}
+                      </Typography>
+                    </ListItem>
+                  })}
+                </List>
+              </div>)}
 
-          {/* Recipe - activeTab - ingredients */}
-          {activeTab === 'ingredients' && (
-            <div>
-              {/* Recipe - ingredients's title */}
-              <Typography
-                variant='h5'
-                sx={{ mt: 3, mb: 2, fontWeight: 'bold' }}>
-                Ingredients
-              </Typography>
-
-              {/* Recipe - ingredients's text */}
-              <List>
-                {ingredients.map((ingredient) => {
-                  return <ListItem key={ingredient.original} sx={{ pl: 0 }}>
-                    <Typography variant='h5' >
-                      {ingredient.original}
-                    </Typography>
-                  </ListItem>
-                })}
-              </List>
-            </div>)}
-
-        </div> {/* Recipe - info's section - END */}
-      </Container> {/* Recipe - main container - END */}
-
+          </div> {/* Recipe - info's section - END */}
+        </Container> {/* Recipe - main container - END */}
+      </ErrorBoundary>
       {/* Footer */}
       <Footer />
     </div>
