@@ -16,11 +16,12 @@ const Search = () => {
   return (
     <Container onSubmit={submitHandler} className={styles['search-container']}>
       <form className={styles['form']}>
-        <FaSearch></FaSearch>
+        <FaSearch/>
         <input
           onChange={(e) => setInput(e.target.value)}
           type="text"
           value={input}
+          placeholder="apple, cookie, egg, etc."
         />
       </form>
     </Container>

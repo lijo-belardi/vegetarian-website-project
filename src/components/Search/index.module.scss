@@ -24,6 +24,10 @@
         width: 100%;
     }
 
+    ::placeholder {
+        color: $text-main-color;
+    }
+
     svg {
         position: absolute;
         top: 50%;
