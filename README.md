@@ -99,7 +99,7 @@ Open the project in your code editor.
 
 1. create an ".env" file and insert this: 
  ```
-REACT_APP_API_KEY=”API KEY”
+REACT_APP_API_KEY=API KEY
 ```
 
 3. Install project's dependecies with:
