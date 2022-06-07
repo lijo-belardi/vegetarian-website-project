@@ -5,6 +5,7 @@
 The project allows the user to search for vegetarian recipes within the Spoonacular service.
 The user can view the recipe's image, summary, instructions, and ingredients.
 
+
 ## Link
 ### Website: [vegetarian-website-netlify](https://vegetarian-recipe-website.netlify.app/)
 
@@ -87,6 +88,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Getting Started with my projecy
+
+If you want to download the project locally and check that it works correctly, you need to do a series of steps.
+
+1. Register for the [Spoonacular](https://spoonacular.com/food-api/docs) to obtain the API KEY.
+
+Open the project in your editor.
+1. create an ".env" file and insert this: REACT_APP_API_KEY=”Spoonacular's API KEY”
+2. Install project's dependecies with:
+```
+npm install
+```
+3. Runs the app in the development mode with this command:
+```
+npm start
+```
 
 
 ## Built with
