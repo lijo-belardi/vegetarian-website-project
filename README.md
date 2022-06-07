@@ -95,9 +95,14 @@ If you want to download the project locally and check that it works correctly, y
 
 1. Register for the [Spoonacular](https://spoonacular.com/food-api/docs) to obtain the API KEY.
 
-Open the project in your editor.
-1. create an ".env" file and insert this: REACT_APP_API_KEY=”Spoonacular's API KEY”
-2. Install project's dependecies with:
+Open the project in your code editor.
+
+1. create an ".env" file and insert this: 
+ ```
+REACT_APP_API_KEY=”API KEY”
+```
+
+3. Install project's dependecies with:
 ```
 npm install
 ```
