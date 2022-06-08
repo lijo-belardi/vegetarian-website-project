@@ -99,14 +99,14 @@ Open the project in your code editor.
 
 1. create an ".env" file and insert this: 
  ```
-REACT_APP_API_KEY=API KEY
+REACT_APP_API_KEY=API_KEY
 ```
 
 3. Install project's dependecies with:
 ```
 npm install
 ```
-3. Runs the app in the development mode with this command:
+3. Run the app in the development mode with this command:
 ```
 npm start
 ```
