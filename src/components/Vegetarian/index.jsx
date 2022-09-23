@@ -16,7 +16,7 @@ const Vegetarian = () => {
       {/* Vegetarian - grid */}
       <div className={styles.grid}>
         {/* Vegetarian - grid's items */}
-        {recipes.map((recipe) => {
+        {recipes?.map((recipe) => {
           return (
             <Link key={recipe.id} to={`/recipe/${recipe.id}`}>
               <Card

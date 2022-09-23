@@ -5,7 +5,7 @@ import url from "../api/popularVegetarianRequest";
 export const PopularVegetarianContext = createContext()
 
 export const PopularVegetarianProvider = (props) => {
-    const [popularRecipes, setPopularRecipes] = useState([])
+    const [popularRecipes, setPopularRecipes] = useState(null)
 
     useEffect(() => {
         getPopularVegetarianRecipes()
