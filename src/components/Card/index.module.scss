@@ -1,8 +1,14 @@
 .card {
-    min-height: 25rem;
+    min-height: 20rem;
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
+    transition: 300ms ease-in;
+
+    &:hover {
+        transform: scale(0.97);
+        outline: 3px solid #38AD60;
+    }
 
     img {
         border-radius: 2rem;
