@@ -1,15 +1,19 @@
+// React
 import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
+// Mui Components
 import { Container, Typography, List, ListItem } from '@mui/material'
-import Search from '../../components/Search'
-import Navbar from '../../components/Navbar'
-import RecipeTitle from '../../components/RecipeTitle';
-import RecipeImage from '../../components/RecipeImage';
-import styles from './index.module.scss'
-import classNames from "classnames";
-import axios from 'axios'
-import Footer from '../../components/Footer';
+// My Components
 import ErrorBoundary from '../../components/ErrorBoundary'
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar'
+import RecipeImage from '../../components/RecipeImage';
+import RecipeTitle from '../../components/RecipeTitle';
+import Search from '../../components/Search'
+// Others import
+import axios from 'axios'
+import classNames from "classnames";
+import styles from './index.module.scss'
 
 
 const Recipe = () => {
